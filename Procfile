@@ -1,3 +1,3 @@
 release: python manage.py migrate
 
-web: gunicorn greatkart.wsgi --log-file -
+web: gunicorn shopweb.wsgi --log-file -
