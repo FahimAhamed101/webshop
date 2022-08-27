@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="container">
+   
+    <div role= "navigation" aria-label="breadcrumb">
+        <ul class="breadcrumb"> 
+           <li class="breadcrumb-item"><a href="#">Tutorials</a></li>
+           <li class="breadcrumb-item"><a href="#">Frontend</a></li>
+           <li class="breadcrumb-item active" aria-current="page">Bootstrap</li>
+        </ul>
+     </div>
+     <div class="d-md-flex flex-md-row justify-content-between w-100 my-md-3 ps-md-3  ">
+       
+        <div class=" text-bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 overflow-hidden">
+
+  <button type="button" class="btn btn-sm btn-outline-dark rounded-pill pl-4 pr-4">
+    <i class="fa fa-arrow-left"></i><span class="pl-2"> CONTINUE SHOPPING </span> </button> 
+   
+     
+         
+        </div>
+        <div class="  me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        
+            <h2 class="display-5"> Review Order </h2>
+          
+            <button type="button" class="btn btn-sm btn-outline-none rounded-pill pl-4 pr-4"><i class="fa fa-arrow-left"></i></button> 
+   
+         
+        </div>
+      </div>
+    
+      
+</section>
+  <section>
+<div class="container ">
+        <div class="row ">
+          <div class="col-8 justify-content-center">
+            
+            <div class="d-flex">
+            
+                     <img  width="20%" src="https://cdn.mypaydo.com/1600x1600/filters:format(webp)/media/312/products/25415/dsc06254.JPG"  >
+                     <h2 class="display-5"> Review Order </h2>
+             
+              
+               </div>
+              <div>
+
+              </div>
+          </div>
+          <div class="col-4 text-center">
+            <div class="input-group">
+                <span class="input-group-btn">
+                    <button type="button" class="quantity-left-minus btn btn-dark btn-number"  data-type="minus" data-field="">
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                    </button>
+                </span>
+              
+                      <input  type="text" id="quantity" name="quantity" class="form-control input-number" value="10" min="1" max="100">
+               
+              
+                <span class="input-group-btn">
+                    <button type="button" class="quantity-right-plus btn btn-dark btn-number" data-type="plus" data-field="">
+                        <i class="fa fa-plus"></i>
+                    </button>
+                </span>
+            </div>
+      </div>
+      <div class="container">
+             <div class="row justify-content-md-center ">
+        <div class="col col-lg-2">
+        <span> <h4 > Total Product </h4></span>   
+        </div>
+        <div class="col col-lg-2">
+            <h4 > 425.000 KWD </h4>
+          </div>
+        <div class="col col-lg-2">
+            <button type="button" class="btn btn-dark btn-outline-none rounded-pill pl-4 pr-4">
+               <span class="pl-2"> CHECKOUT </span> </button> 
+               
+                 
+        </div>
+        </div>
+      </div>
+ 
+      </section>
+      
+    {% endblock %}

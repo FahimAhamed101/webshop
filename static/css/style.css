@@ -1,7 +1,50 @@
+
+ .Submit{
+	justify-content: end;
+	text-align: right;
+ }
+ #inputAddress  {
+    width: 100%;
+   
+    border: none !important;
+    border-bottom: 1px solid #ebebeb !important;
+    padding: 5px 0;
+    color: #222;
+    margin-bottom: 31px;
+    font-family: 'Roboto Slab';
+	outline: none !important;
+box-shadow: none !important;
+}
+
 .body__logo{
 	justify-content: center;
 	
 }
+.has-search .form-control {
+    padding-left: 2.375rem !important;
+	border-radius: 25px !important;
+}
+.searchbar{
+	justify-content: end !important;
+}
+.has-search .form-control-feedback {
+    position: absolute !important;
+    z-index: 2;
+    
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: rgb(145, 143, 143);
+
+}
+.breadcrumb-item + .breadcrumb-item::before {
+	content: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPjxwYXRoIGQ9Ik0yLjUgMEwxIDEuNSAzLjUgNCAxIDYuNSAyLjUgOGw0LTQtNC00eiIgZmlsbD0iY3VycmVudENvbG9yIi8+PC9zdmc+) !important;
+ }
+ .breadcrumb{
+	background-color: #ffffff;
+ }
 .ionicon, svg {
     display: block;
     height: 100%;
