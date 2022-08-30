@@ -2,21 +2,22 @@
 {% load static %}
 
 {% block content %}
+
 <section class="container">
    
-    <div role= "navigation" aria-label="breadcrumb">
+
+     <div class="d-md-flex flex-md-row justify-content-between w-100 my-md-3 ps-md-3  ">
+          <div role= "navigation" aria-label="breadcrumb">
         <ul class="breadcrumb"> 
            <li class="breadcrumb-item"><a href="#">Tutorials</a></li>
            <li class="breadcrumb-item"><a href="#">Frontend</a></li>
            <li class="breadcrumb-item active" aria-current="page">Bootstrap</li>
         </ul>
-     </div>
-     <div class="d-md-flex flex-md-row justify-content-between w-100 my-md-3 ps-md-3  ">
-       
-        <div class=" text-bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 overflow-hidden">
-
   <button type="button" class="btn btn-sm btn-outline-dark rounded-pill pl-4 pr-4">
-    <i class="fa fa-arrow-left"></i><span class="pl-2"> CONTINUE SHOPPING </span> </button> 
+    <i class="fa fa-arrow-left"></i><span class="pl-2"> CONTINUE SHOPPING </span> </button>
+     </div>
+        <div class=" text-bg-dark me-md-3 pt-1 px-3 pt-md-5 px-md-5 overflow-hidden">
+ 
    
      
          
@@ -33,6 +34,7 @@
     
       
 </section>
+{% for cart_item in cart_items %}
   <section>
 <div class="container ">
         <div class="row ">
@@ -40,7 +42,7 @@
             
             <div class="d-flex">
             
-                     <img  width="20%" src="https://cdn.mypaydo.com/1600x1600/filters:format(webp)/media/312/products/25415/dsc06254.JPG"  >
+                     <img  width="20%" src="{{ cart_item.product.images.url }}"  >
                      <h2 class="display-5"> Review Order </h2>
              
               
@@ -67,16 +69,19 @@
                 </span>
             </div>
       </div>
-      <div class="container">
+      <div class="container pt-5 pb-5">
              <div class="row justify-content-md-center ">
-        <div class="col col-lg-2">
-        <span> <h4 > Total Product </h4></span>   
+        <div class="col col-lg-2 ">
+          <span class="h5">
+                 Total Product :{{ cart_item.quantity }}
+          </span>
+    
         </div>
         <div class="col col-lg-2">
-            <h4 > 425.000 KWD </h4>
+            <h4 >{{total}} KWD </h4>
           </div>
         <div class="col col-lg-2">
-            <button type="button" class="btn btn-dark btn-outline-none rounded-pill pl-4 pr-4">
+            <button type="button" class="btn btn-lg btn-dark btn-outline-none rounded pl-4 pr-4">
                <span class="pl-2"> CHECKOUT </span> </button> 
                
                  
@@ -85,5 +90,5 @@
       </div>
  
       </section>
-      
+      {% endfor %}
     {% endblock %}
