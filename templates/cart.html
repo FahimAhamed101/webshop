@@ -26,7 +26,9 @@
         
             <h2 class="display-5"> Review Order </h2>
           
-            <button type="button" class="btn btn-sm btn-outline-none rounded-pill pl-4 pr-4"><i class="fa fa-arrow-left"></i></button> 
+            <button type="button" class="btn btn-sm btn-outline-none rounded-pill pl-4 pr-4">
+              
+              <img width="10%" height="10%" src="{% static 'img/icon/delete.png' %}" /><span class="h6 font-weight-bold">CLEAR CART</span></button> 
    
          
         </div>
@@ -38,18 +40,32 @@
   <section>
 <div class="container ">
         <div class="row ">
-          <div class="col-8 justify-content-center">
-            
-            <div class="d-flex">
-            
-                     <img  width="20%" src="{{ cart_item.product.images.url }}"  >
-                     <h2 class="display-5"> Review Order </h2>
-             
-              
-               </div>
-              <div>
+          <div class="col-8 ">
+ <div class="d-flex">
+      <img  width="20%" src="{{ cart_item.product.images.url }}"  >
+    
+       
+        
+               
+     
+     <div class="col-4">
+        
+       
+             <span class="col display-5 font-weight-bold">{{ cart_item.product.product_name }}</span>
+             <span class=" col display-5 ">{{ cart_item.product.description }}</span>   
 
-              </div>
+ 
+
+       </div > 
+
+ </div> 
+             
+                   
+            
+       
+               
+               
+          
           </div>
           <div class="col-4 text-center">
             <div class="input-group">

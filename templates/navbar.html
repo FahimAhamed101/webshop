@@ -1,105 +1,84 @@
 {% load static %}
-
-
-    <nav class="navbar navbar-expand-lg">
-
-        <ul class="navbar-nav active">
-            <li class="active">
-                <a href="#" class="nav-link">Home</a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link">Product</a>
-            </li>
-            
-            <li class="nav-item">
-                <a href="#" class="nav-link">Contact Us</a>
-            </li>
-        </ul>
-    </div>
-</nav>
-
-    <!-- Offcanvas Menu Begin -->
-    <div class="offcanvas-menu-overlay"></div>
-    <div class="offcanvas-menu-wrapper">
-        <div class="offcanvas__option">
-            <div class="offcanvas__links">
-                <a href="#">Sign in</a>
-                <a href="#">FAQs</a>
-            </div>
-            <div class="offcanvas__top__hover">
-                <span>Usd <i class="arrow_carrot-down"></i></span>
-                <ul>
-                    <li>USD</li>
-                    <li>EUR</li>
-                    <li>USD</li>
-                </ul>
-            </div>
-        </div>
-        <div class="offcanvas__nav__option">
-            <a href="#" class="search-switch"><img src="{% static 'img/icon/search.png' %}" alt=""></a>
-            <a href="#"><img src="{% static 'img/icon/heart.png' %}" alt=""></a>
-            <a href="#"><img src="{% static 'img/icon/cart.png' %}" alt=""> <span>0</span></a>
-            <div class="price">$0.00</div>
-        </div>
-        <div id="mobile-menu-wrap"></div>
-        <div class="offcanvas__text">
-            <p>Free shipping, 30-day return or refund guarantee.</p>
-        </div>
-    </div>
-    <!-- Offcanvas Menu End -->
-
-    <!-- Header Section Begin -->
- 
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-3">
-                 
-                    <a href="{% url 'cart' %}" class="widget-header pl-3 ml-3">
-                    <div class="header__logo ">
-                        <a href="/cart"><img src="{% static 'img/icon/shoppingbag.jpg' %}" width="20%" alt=""></a>
-                       <span class="badge badge-pill badge-danger notify">{{cart_count}}</span>
-                    </div>
-                       
-                      </a>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <nav class="header__menu mobile-menu">
-                        <ul>
-                            <li  {% if '/' == request.path %} class="active"
-                            {% else %} class=""
-                            {% endif %}><a href="{% url 'home'%}">Home</a></li>
-
-
-                            <li  {% if '/products' == request.path %} class="active"
-                            {% else %} class=""
-                            {% endif %}><a href="{% url 'products'%}">PRODUCTS</a></li>
-                            
-                             <li {% if '/contact' == request.path %} class="active"
-                             {% else %} class=""
-                             {% endif %}><a href="{% url 'contact'%}">CONTACT</a></li>
-                            <li <li {% if '/about' == request.path %} class="active"
-                            {% else %} class=""
-                            {% endif %}><a href="/about">ABOUT</a></li>
-                            
-                        </ul>
-                    </nav>
-                </div>
-                <div class="col-lg-3 col-md-3">
-                    <div class="header__nav__option">
-                        <a href="#" class="search-switch"><img src="{% static 'img/icon/search.png' %}" alt=""></a>
-                       
-                        
-                        <a href="#"><img src="{% static 'img/icon/cart.png' %}" alt=""> <span>       <a href="{% url 'cart' %}" class="widget-header pl-3 ml-3">
-                            <div class="icon icon-sm rounded-circle border"><i class="fa fa-shopping-cart"></i></div>
-                            <span class="badge badge-pill badge-danger notify">{{cart_count}}</span>
-                          </a></span></a>
-                        <div class="price">$0.00</div>
-                    </div>
-                </div>
-                <hr>
-            </div>
-            <div class="canvas__open"><i class="fa fa-bars"></i></div>
-        </div>
-        
+<section>
+    <div class="navbarsection">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light  fixed-top">
+    <div class="row  ">
+           <div class="col-3 ">
+                <a href="/cart" class="d-flex p-3">
+                
+                          <img width="30%" height="50%" src="{% static 'img/icon/bag.svg' %}" />
               
-    </header>
+                  
+                   
+                    <span class=" text-sm m-2 badge badge-dark rounded-circle notify"><small>{{cart_count}}</small></span></a>
+                 
+                          
+               
+                  
+               
+           </div>
+    
+          <div class="collapse navbar-collapse col-8" id="navbarNavAltMarkup" >
+      <div class="navbar-nav">
+    
+            <li 
+            {% if '/' == request.path %} class="nav-item active"
+                                    {% else %} class=""
+                                    {% endif %}
+            
+            
+            > <a class="nav-link" href="/"> 
+                Home</a> </li>
+        
+        
+            
+                  <li 
+                  {% if '/products/' == request.path %} class="nav-item active"
+                                          {% else %} class=""
+                                          {% endif %}
+                  > <a class="nav-link" href="/products">
+                      
+                        products</a> </li>
+            <li 
+            {% if '/about' == request.path %} class="nav-item active"
+                                    {% else %} class=""
+                                    {% endif %}
+            > <a class="nav-link" href="/about">
+                
+                  about</a> </li>
+           
+                        <li 
+                        {% if '/contact' == request.path %} class="nav-item active"
+                                                {% else %} class=""
+                                                {% endif %}
+                        > <a class="nav-link" href="/contact">
+                            
+                              contact</a> </li>
+             
+      </div>
+    </div>   
+    </div>
+
+   
+    
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <span class="border-bottom"></span> 
+  </nav>    
+    </div>
+
+<hr>
+</section>
+
+     <hr>
+        
+
+          
+
+  
+
+
+
