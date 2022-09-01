@@ -1,77 +1,64 @@
 {% load static %}
-<section>
-    <div class="navbarsection">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light  fixed-top">
-    <div class="row  ">
-           <div class="col-3 ">
-                <a href="/cart" class="d-flex p-3">
-                
-                          <img width="30%" height="50%" src="{% static 'img/icon/bag.svg' %}" />
-              
-                  
-                   
-                    <span class=" text-sm m-2 badge badge-dark rounded-circle notify"><small>{{cart_count}}</small></span></a>
+
+
+
+  <nav class="">
+
+  
+
+  
+    <div class="navbar ">
+      <ul class="nav-menu">
+        <li class="nav-item">
+          
+          <a href="/cart" class="p-3">
+       
+            <img width="20%" height="80%" src="{% static 'img/icon/bag.svg' %}" />
+     
+         
+          
+           <span class=" text-sm m-2 badge badge-dark rounded-circle notify"><small>{{cart_count}}</small></span></a>
+        
                  
-                          
-               
-                  
-               
-           </div>
-    
-          <div class="collapse navbar-collapse col-8" id="navbarNavAltMarkup" >
-      <div class="navbar-nav">
-    
-            <li 
-            {% if '/' == request.path %} class="nav-item active"
-                                    {% else %} class=""
-                                    {% endif %}
-            
-            
-            > <a class="nav-link" href="/"> 
-                Home</a> </li>
-        
-        
-            
-                  <li 
-                  {% if '/products/' == request.path %} class="nav-item active"
-                                          {% else %} class=""
-                                          {% endif %}
-                  > <a class="nav-link" href="/products">
-                      
-                        products</a> </li>
-            <li 
-            {% if '/about' == request.path %} class="nav-item active"
-                                    {% else %} class=""
-                                    {% endif %}
-            > <a class="nav-link" href="/about">
-                
-                  about</a> </li>
-           
-                        <li 
-                        {% if '/contact' == request.path %} class="nav-item active"
-                                                {% else %} class=""
-                                                {% endif %}
-                        > <a class="nav-link" href="/contact">
-                            
-                              contact</a> </li>
-             
+</li>
+<li 
+{% if '/' == request.path %} class="active1"
+                        {% else %} class=""
+                        {% endif %}
+
+
+> <a class="nav-link" href="/"> 
+    Home</a> </li>
+        <li class="nav-item"><a href="#" class="nav-link">Services</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">SignUp</a></li>
+      </ul>
+    </div>
+  
+    <div class="hamburger">
+     
+      <div>
+         <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
       </div>
-    </div>   
-    </div>
-
+      <div >
+        <a href="/cart" class="p-3">
+       
+          <img width="20%" height="80%" src="{% static 'img/icon/bag.svg' %}" />
    
-    
-    
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+       
+        
+         <span class=" text-sm m-2 badge badge-dark rounded-circle notify"><small>{{cart_count}}</small></span></a>
+      </div>
 
-      <span class="border-bottom"></span> 
-  </nav>    
     </div>
+    </div>
+    
+  </nav>
 
-<hr>
-</section>
+
+
 
      <hr>
         

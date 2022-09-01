@@ -107,8 +107,8 @@
 
       <link rel='stylesheet' href='https://sachinchoolur.github.io/lightslider/dist/css/lightslider.css'>
     
-    <link rel="stylesheet" href="{% static 'css/slicknav.min.css' %}" type="text/css">
-    <link rel="stylesheet" href="{% static 'css/slicknav.min.css' %}" type="text/css">
+      
+
     <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
     
   </head>
@@ -171,6 +171,22 @@
 
 
     <script src="{% static 'js/main.js' %}"></script>
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("active");
+});
+
+document.querySelectorAll(".nav-link").forEach((link) =>
+  link.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+  })
+);
+    </script>
 </body>
 
 </html>
