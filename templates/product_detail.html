@@ -7,7 +7,8 @@
            
                
   <div class="d-block mx-auto mb-4">
-     <a href="./index.html"><img src="{% static 'img/logo.png' %}"width="10%" alt=""></a>
+
+     <a href="./index.html"><img src="{% static 'img/logo.png' %}"width="7%" alt=""></a>
   </div>
          
 
@@ -25,11 +26,11 @@
     </ul>
  </div>
     <div class="row no-gutters">
-        <div class="col-md-3 pr-2">
+        <div class="col-md-4 mr-2">
             <div >
                 <div class="demo">
                     <div
-                    style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+                
                     class="swiper mySwiper2"
                   >
                     <div class="swiper-wrapper">
@@ -37,82 +38,47 @@
                         <img  src="{{ single_product.images.url }}">
                       </div>
                       <div class="swiper-slide">
-                        <img  src="https://cdn.mypaydo.com/1600x1600/filters:format(webp)/media/312/products/25415/dsc06242.JPG">
+                        <img  src="{{ single_product.images1.url }}">
                       </div>
                       <div class="swiper-slide">
-                        <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                        <img  src="{{ single_product.images2.url }}">
                       </div>
                       <div class="swiper-slide">
-                        <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
-                      </div>
+                        <img  src="{{ single_product.images3.url }}">
+                    </div>
+                    
                     </div>
              
                   </div>
                   <div thumbsSlider="" class="swiper mySwiper">
 
-                  
-                 
-       <div class="swiper-button-next  ">
-                        <img height="40%"  src="{% static 'img/icon/right-arrow.svg' %}"  />
+                  <div>
+                              
+       <div class="swiper-button-next ">
+                        <img height="40%" class="pr-5" src="{% static 'img/icon/right-arrow.svg' %}"  />
                        </div>
                     <div class="swiper-button-prev">
 
                       <img height="40%"  src="{% static 'img/icon/right-arrow.svg' %}" />
-                    </div> 
-              
-                     <div class="swiper-wrapper ">
+          </div> 
+                  </div>
+       
+            
+                    <div class="swiper-wrapper">
                       <div class="swiper-slide">
-                        <img src="{{ single_product.images.url }}" />
+                        <img  src="{{ single_product.images.url }}">
                       </div>
                       <div class="swiper-slide">
-                        <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                        <img  src="{{ single_product.images1.url }}">
                       </div>
                       <div class="swiper-slide">
-                        <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                        <img  src="{{ single_product.images2.url }}">
                       </div>
                       <div class="swiper-slide">
-                        <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
-                      </div>
+                        <img  src="{{ single_product.images3.url }}">
                     </div>
+                    </div>
+           
         
                  
 
@@ -121,7 +87,7 @@
             </div>
     
         </div>
-        <div class="col-md-8">
+        <div class="col-md-7 pl-2">
           <form action="{% url 'add_cart' single_product.id %}" method="POST">
 						{% csrf_token %}
                 <div class="d-flex flex-row align-items-center">
@@ -156,8 +122,9 @@
                 <div class="product-description">
                    
                  
-                    <div class="mt-2"> <span class="font-weight-bold">Description</span>
-                        <p>{{ single_product.description }}</p>
+                    <div class="pt-4"> <p style="color: black; font-size: small;">
+                      {{ single_product.description }}</p>
+                       
                 
                     </div>
           

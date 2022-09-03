@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from products.models import Product, Variation
 from .models import Cart, CartItem
 from django.core.exceptions import ObjectDoesNotExist
-
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 from django.http import HttpResponse
@@ -188,7 +188,7 @@ def cart(request, total=0, quantity=0, cart_items=None):
     return render(request, 'cart.html', context)
 
 
-
+@login_required(login_url='login')
 def checkout(request, total=0, quantity=0, cart_items=None):
     try:
         tax = 0
@@ -213,4 +213,4 @@ def checkout(request, total=0, quantity=0, cart_items=None):
         'tax'       : tax,
         'grand_total': grand_total,
     }
-    return render(request, 'cart.html', context)
+    return render(request, 'checkout.html', context)

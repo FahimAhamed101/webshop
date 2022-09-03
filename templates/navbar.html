@@ -2,65 +2,89 @@
 
 
 
-  <nav class="">
-
-  
-
-  
-    <div class="navbar ">
-      <ul class="nav-menu">
-        <li class="nav-item">
-          
-          <a href="/cart" class="p-3">
-       
-            <img width="20%" height="80%" src="{% static 'img/icon/bag.svg' %}" />
-     
-         
-          
-           <span class=" text-sm m-2 badge badge-dark rounded-circle notify"><small>{{cart_count}}</small></span></a>
-        
-                 
-</li>
-<li 
-{% if '/' == request.path %} class="active1"
-                        {% else %} class=""
-                        {% endif %}
-
-
-> <a class="nav-link" href="/"> 
-    Home</a> </li>
-        <li class="nav-item"><a href="#" class="nav-link">Services</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">SignUp</a></li>
-      </ul>
+<section class="navmenu">
+  <div class="site-mobile-menu site-navbar-target">
+  <div class="site-mobile-menu-header">
+    <div class="site-mobile-menu-close mt-3">
+      <span class="icon-close2 js-menu-toggle"></span>
     </div>
-  
-    <div class="hamburger">
-     
-      <div>
-         <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-      </div>
-      <div >
-        <a href="/cart" class="p-3">
-       
-          <img width="20%" height="80%" src="{% static 'img/icon/bag.svg' %}" />
-   
-       
-        
-         <span class=" text-sm m-2 badge badge-dark rounded-circle notify"><small>{{cart_count}}</small></span></a>
+  </div>
+  <div class="site-mobile-menu-body"></div>
+</div>
+
+
+
+<header class="site-navbar site-navbar-target" role="banner">
+
+  <div class="">
+    <div class="row  navbaritems align-items-center position-relative">
+
+      <div class=" ">
+        <div class="site-logo">
+        <a href="/cart" class="d-flex p-3">
+                
+                          <img width="40%" height="80%" src="{% static 'img/shopping-bag.png' %}" />
+              
+                  
+                   
+                    <span class=" text-sm m-2 badge badge-dark rounded-circle notify"><small>{{cart_count}}</small></span></a>
+        </div>
       </div>
 
+      <div class="text-right ">
+        
+
+        <span class="d-inline-block d-lg-none"><a href="#" class="text-primary site-menu-toggle js-menu-toggle py-5"><span class="icon-menu h3 text-dark"></span></a></span>
+
+
+        <nav class="site-navigation   d-none d-lg-block" role="navigation">
+          <ul class="site-menu main-menu js-clone-nav ml-auto ">
+            <li 
+            {% if '/' == request.path %} class=" active"
+                                    {% else %} class=""
+                                    {% endif %}
+            
+            
+            > <a class="nav-link" href="/"> 
+                Home</a> </li>
+        
+        
+            
+                  <li 
+                  {% if '/products/' == request.path %} class="nav-item active"
+                                          {% else %} class=""
+                                          {% endif %}
+                  > <a class="nav-link" href="/products">
+                      
+                        products</a> </li>
+            <li 
+            {% if '/about' == request.path %} class="nav-item active"
+                                    {% else %} class=""
+                                    {% endif %}
+            > <a class="nav-link" href="/about">
+                
+                  about</a> </li>
+           
+                        <li 
+                        {% if '/contact' == request.path %} class="nav-item active"
+                                                {% else %} class=""
+                                                {% endif %}
+                        > <a class="nav-link" href="/contact">
+                            
+                              contact</a> </li>
+          </ul>
+        </nav>
+      </div>
+
+      
     </div>
-    </div>
-    
-  </nav>
+  </div>
+
+</header>
+</section>
+<hr >
 
 
-
-
-     <hr>
         
 
           

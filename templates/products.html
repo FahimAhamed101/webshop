@@ -9,7 +9,7 @@
            
                
   <div class="d-block mx-auto mb-4">
-     <a href="./index.html"><img src="{% static 'img/logo.png' %}"width="10%" alt=""></a>
+     <a href="./index.html"><img src="{% static 'img/logo.png' %}"width="7%" alt=""></a>
   </div>
          
 
@@ -51,6 +51,7 @@
   <div class="text-center">
     <a href="{{ product.get_url }}">
         <p >  {{ product.product_name }} </p>
+        <small>{{product.product_smtext}}</small>
     </a>
    
   <span >{{ product.price }}</span>
