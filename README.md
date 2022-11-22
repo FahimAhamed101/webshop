@@ -1,2 +1,2 @@
 # webshop
-https://webshop10.herokuapp.com/
+https://webshop.herokuapp.com/
