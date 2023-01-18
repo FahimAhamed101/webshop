@@ -31,50 +31,44 @@
 
         <div class="row row-cols-2 row-cols-sm-2 row-cols-md-4">
        
-          <div class="col">
-            <div>
-              <img  loading="eager" class="slider-container ng-tns-c210-3 ng-star-inserted" width="100%"
-            src="https://cdn.mypaydo.com/600x600/filters:format(webp)/media/312/products/25412/Fame-100.JPG">
-            <div class="text-center">
-               <p >  DIFFUSER REFILL  </p>
-            <span>STARTING FROM 14.000 KWD</span>
-            </div>
-           
-            </div>
-            </div>
-            <div class="col">
-              <div>
-                <img  loading="eager" class="slider-container ng-tns-c210-3 ng-star-inserted" width="100%"
-              src="https://cdn.mypaydo.com/600x600/filters:format(webp)/media/312/products/25412/Fame-100.JPG">
-              <div class="text-center">
-                 <p >  DIFFUSER REFILL  </p>
-              <span>STARTING FROM 14.000 KWD</span>
-              </div>
+          
+            
+             {% if products %}
+	{% for product in products %}
+<div class="col pb-3">
+  <div>
+    <a href="{{ product.get_url }}">
+          <img  loading="eager" class="slider-container ng-tns-c210-3 ng-star-inserted" width="100%"
+  src="{{ product.images.url }}">
+    </a>
+
+  <div class="text-center">
+    <a href="{{ product.get_url }}">
+        <p >  {{ product.product_name }} </p>
+        <small>{{product.product_smtext}}</small>
+    </a>
+   
+  <span >{{ product.price }}</span>
+  <div class="pt-1">
+
+            <a href="{{ product.get_url }}" type="button" class=" btn btn-outline-dark btn-sm"><b >Add to Cart</b></a>
+  </div>
+
+  </div>
+ 
+  </div>
+  </div>
+
+  {% endfor %}
+	{% else %}
+	<div>
+		<h2>No result found. Please try again.</h2>
+	</div>
+	{% endif %}
+</div>
              
-              </div>
-              </div>
-                <div class="col">
-                  <div>
-                    <img  loading="eager" class="slider-container ng-tns-c210-3 ng-star-inserted" width="100%"
-                  src="https://cdn.mypaydo.com/600x600/filters:format(webp)/media/312/products/25412/Fame-100.JPG">
-                  <div class="text-center">
-                     <p >  DIFFUSER REFILL  </p>
-                  <span>STARTING FROM 14.000 KWD</span>
-                  </div>
-                 
-                  </div>
-                  </div>
-                  <div class="col">
-                    <div>
-                      <img  loading="eager" class="slider-container ng-tns-c210-3 ng-star-inserted" width="100%"
-                    src="https://cdn.mypaydo.com/600x600/filters:format(webp)/media/312/products/25412/Fame-100.JPG">
-                    <div class="text-center">
-                       <p >  DIFFUSER REFILL  </p>
-                    <span>STARTING FROM 14.000 KWD</span>
-                    </div>
-                   
-                    </div>
-                    </div>
+              
+             
               
         </div>
       </div> 
