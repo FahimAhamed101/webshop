@@ -25,8 +25,8 @@ SECRET_KEY = 'django-insecure-0e!0&(l(80ijqqnjnpwm$8t147a_=0c81z_=^vrof=kt#v04v8
 #SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['webshop-production.up.railway.app']
-CSRF_TRUSTED_ORIGINS = ['https://webshop-production.up.railway.app/']
+ALLOWED_HOSTS = ["127.0.0.1", "localhost", "webshop.pythonanywhere.com"]
+CSRF_TRUSTED_ORIGINS = ['https://webshop.pythonanywhere.com/']
 
 # Application definition
 
@@ -83,13 +83,17 @@ WSGI_APPLICATION = 'shopweb.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = {
+"""DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
+}"""
+DATABASES = {
+    'default': dj_database_url.config(
+        default="sqlite:///" + os.path.join(BASE_DIR, "db.sqlite3")
+    )
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
